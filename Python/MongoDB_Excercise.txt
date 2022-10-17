@@ -1,0 +1,44 @@
+
+
+1.use newHRDatabase
+
+2.db.createCollection('PersonalInfo');
+  db.createCollection('ProfessionalInfo');
+
+show collections;
+
+3. ----Personal Info------
+
+  db.PersonalInfo.inser({Empid:'X20221010', EmpName:'Pritam', Age:26, Gender:'male', Contact:9988776655, City:'Delhi'})
+  db.PersonalInfo.inser({Empid:'X20221011', EmpName:'Gitanjali', Age:27, Gender:'Female', City:'NewYork'})
+  db.PersonalInfo.inser({Empid:'X20221013', EmpName:'Sonam', Age:29, Gender:'Female', Contact:7788995533, City:'Bangaluru'})
+  db.PersonalInfo.inser({Empid:'X20221017', EmpName:'Shekhar', Age:28, Gender:'male', City:'Pune'})
+
+  db.PersonalInfo.find().pretty()
+
+------Professional info--------
+
+db.ProfessionalInfo.insert({Designation:'Consultant', Department:'Finance', Income:80000})
+db.ProfessionalInfo.insert({Designation:'Sr.Developer', Department:'IT', Income:90000})
+db.ProfessionalInfo.insert({Designation:'Data Analyst', Department:'Software', Income:150000})
+db.ProfessionalInfo.insert({Designation:'Manager', Department:'Logistics', Income:2000000})
+
+db.ProfessionalInfo.find().pretty()
+
+4.db.PersonalInfo.update({Empid:'X20221011'},{$set:{Age:25,City:'Chennai'}})
+db.PersonalInfo.find().pretty()
+
+db.PersonalInfo.update({Empid:'X20221013'},{$set:{Age:31,City:'KolKata'}})
+db.PersonalInfo.find().pretty()
+
+
+
+
+
+
+
+
+
+
+
+
